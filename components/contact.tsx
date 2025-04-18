@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -9,6 +9,7 @@ import { Github, Linkedin, Mail } from "lucide-react"
 
 export default function Contact() {
   const contactRef = useRef<HTMLElement>(null)
+  const [submitted, setSubmitted] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -19,7 +20,7 @@ export default function Contact() {
           }
         })
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     )
 
     const elements = contactRef.current?.querySelectorAll(".animate-on-scroll")
@@ -73,41 +74,75 @@ export default function Contact() {
 
         <Card className="animate-on-scroll opacity-0 border border-border bg-card dark:bg-card/50">
           <CardContent className="p-6">
-            <form className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">
-                    Name
-                  </label>
-                  <Input id="name" placeholder="Your name" className="border-border focus:border-primary" />
+            {submitted ? (
+              <div className="text-center text-lg font-semibold text-green-600">
+                Thank you! Your message has been sent.
+              </div>
+            ) : (
+              <form
+                onSubmit={async (e) => {
+                  e.preventDefault()
+                  const form = e.target as HTMLFormElement
+                  const formData = new FormData(form)
+
+                  await fetch("https://formspree.io/f/manegpda", {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                      Accept: "application/json",
+                    },
+                  })
+
+                  setSubmitted(true)
+                  form.reset()
+                }}
+                className="space-y-4"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="text-sm font-medium">
+                      Name
+                    </label>
+                    <Input
+                      id="name"
+                      name="name"
+                      placeholder="Your name"
+                      className="border-border focus:border-primary"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="text-sm font-medium">
+                      Email
+                    </label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="Your email"
+                      className="border-border focus:border-primary"
+                      required
+                    />
+                  </div>
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">
-                    Email
+                  <label htmlFor="message" className="text-sm font-medium">
+                    Message
                   </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="Your email"
+                  <Textarea
+                    id="message"
+                    name="message"
+                    placeholder="Your message"
+                    rows={5}
                     className="border-border focus:border-primary"
+                    required
                   />
                 </div>
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium">
-                  Message
-                </label>
-                <Textarea
-                  id="message"
-                  placeholder="Your message"
-                  rows={5}
-                  className="border-border focus:border-primary"
-                />
-              </div>
-              <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                Send Message
-              </Button>
-            </form>
+                <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                  Send Message
+                </Button>
+              </form>
+            )}
           </CardContent>
         </Card>
       </div>
