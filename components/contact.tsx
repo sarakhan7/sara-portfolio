@@ -75,9 +75,9 @@ export default function Contact() {
         <Card className="animate-on-scroll opacity-0 border border-border bg-card dark:bg-card/50">
           <CardContent className="p-6">
             {submitted ? (
-              <div className="text-center text-lg font-semibold text-green-600">
-                Thank you! Your message has been sent.
-              </div>
+              <div className="text-center text-lg font-semibold text-[#FB6F92] dark:text-white drop-shadow-sm">
+              Thank you! Your message has been sent.
+            </div>                     
             ) : (
               <form
                 onSubmit={async (e) => {
