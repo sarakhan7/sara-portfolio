@@ -34,7 +34,7 @@ export default function Projects() {
       title: "StudyFi",
       description: "AI-powered study assistant that transforms raw notes into quizzes, vocab games, and more interactive games — complete with a smart chatbot and a clean, responsive UI.", 
       tech: ["HTML", "CSS", "JavaScript", "OpenAI API"],
-      demoUrl: "https://studyfi.vercel.app/",
+      demoUrl: "https://studyfi-jda2hss1t-sarakhan7s-projects.vercel.app/",
       githubUrl: "https://github.com/sarakhan7/studyfi",
     },
     {
