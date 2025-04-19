@@ -32,31 +32,31 @@ export default function Projects() {
   const projects = [
     {
       title: "StudyFi",
-      description: "A productivity app combining pomodoro timer with lo-fi music for focused study sessions.",
-      tech: ["React", "Firebase", "Tailwind CSS", "Web Audio API"],
-      demoUrl: "#",
-      githubUrl: "#",
+      description: "AI-powered study assistant that transforms raw notes into quizzes, vocab games, and more interactive games — complete with a smart chatbot and a clean, responsive UI.", 
+      tech: ["HTML", "CSS", "JavaScript", "OpenAI API"],
+      demoUrl: "https://studyfi.vercel.app/",
+      githubUrl: "https://github.com/sarakhan7/studyfi",
     },
     {
       title: "GlobalPulse",
-      description: "Real-time news aggregator with customizable feeds and sentiment analysis.",
-      tech: ["Next.js", "TypeScript", "MongoDB", "NLP API"],
+      description: "Real-time global sentiment tracker that analyzes Reddit and news content using OpenAI to reveal how different regions feel about trending topics. Fully interactive dashboard with charts and filters.",
+      tech: ["React", "Tailwind CSS", "Node.js", "OpenAI API", "Chart.js"],
       demoUrl: "#",
       githubUrl: "#",
     },
     {
       title: "SafeRoute",
-      description: "Mobile app providing safe walking routes based on crime data and street lighting.",
-      tech: ["React Native", "Node.js", "Express", "Google Maps API"],
+      description: "Location-aware web app that helps users find safer walking paths based on real-time crime data. Built with Google Maps API and geolocation for personalized routing.",
+      tech: ["HTML", "CSS", "JavaScript", "Node.js", "Google Maps API"],
       demoUrl: "#",
       githubUrl: "#",
     },
     {
       title: "Recipe Finder",
-      description: "Web app that suggests recipes based on ingredients you already have at home.",
-      tech: ["JavaScript", "HTML/CSS", "Spoonacular API", "LocalStorage"],
-      demoUrl: "#",
-      githubUrl: "#",
+      description: "Minimalist recipe search tool that suggests meals based on ingredients you already have using TheMealDB API.", 
+      tech: ["JavaScript", "HTML", "CSS", "TheMealDB API"],
+      demoUrl: "https://recipe-finder-app-sarakhan7s-projects.vercel.app",
+      githubUrl: "https://github.com/sarakhan7/RecipeFinderApp",
     },
   ]
 
@@ -89,29 +89,27 @@ export default function Projects() {
                 </div>
               </CardContent>
               <CardFooter className="flex gap-3">
-                <Button
-                  variant="default"
-                  size="sm"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                  asChild
-                >
-                  <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Live Demo
-                  </a>
-                </Button>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                  asChild
-                >
-                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" />
-                    GitHub
-                  </a>
-                </Button>
-              </CardFooter>
+  <a
+    href={project.demoUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-md text-sm font-medium hover:bg-primary/90 transition-colors"
+  >
+    <ExternalLink className="mr-2 h-4 w-4" />
+    Live Demo
+  </a>
+
+  <a
+    href={project.githubUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center px-4 py-2 border border-primary text-primary rounded-md text-sm font-medium hover:bg-primary hover:text-white transition-colors"
+  >
+    <Github className="mr-2 h-4 w-4" />
+    GitHub
+  </a>
+</CardFooter>
+
             </Card>
           ))}
         </div>
