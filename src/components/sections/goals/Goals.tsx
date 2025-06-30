@@ -68,12 +68,12 @@ function Comment({ step }: { step: number }) {
         opacity,
       }}
     >
-      <Avatar alt="Michael" color="primary" variant="solid" size="sm">
-        M
+      <Avatar alt="Woogle" color="primary" variant="solid" size="sm">
+        A
       </Avatar>
       <Stack>
         <Typography level="body3" textColor="text.secondary" fontWeight="600">
-          Michael
+          Alexander
           {" • "}
           <Typography textColor="text.tertiary">5 minutes ago</Typography>
         </Typography>
@@ -82,7 +82,7 @@ function Comment({ step }: { step: number }) {
           textColor="text.secondary"
           sx={{ marginRight: "0.5rem" }}
         >
-          Let&apos;s add a text input under these!
+          Are you a cat or a dog person?
         </Typography>
       </Stack>
     </Card>

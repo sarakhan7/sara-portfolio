@@ -59,7 +59,7 @@ const details = {
       location: "Remote",
       contract: "Internship",
       position: "Junior Software Developer",
-      start: "Jan 2025",
+      start: "May 2025",
       end: "Present",
       description: "Building full-stack web applications and contributing to innovative software solutions." as string | string[],
       skills: [
