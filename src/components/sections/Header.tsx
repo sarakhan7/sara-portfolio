@@ -22,10 +22,6 @@ export default function Header() {
   const { colorScheme } = useColorScheme();
 
   const dark = useMemo(() => colorScheme === "dark", [colorScheme]);
-  const visitor = useMemo(
-    () => visitors[Math.floor(Math.random() * visitors.length)],
-    []
-  );
 
   const currentCompany = useMemo(
     () =>
