@@ -47,7 +47,7 @@ export default function Reach({ step }: { step: number }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+        access_key: "87a8d4d4-d542-45e9-b2d5-d6698b8457e0",
         email,
         name,
         message,
