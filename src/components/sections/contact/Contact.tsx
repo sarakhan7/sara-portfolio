@@ -21,12 +21,13 @@ export default function Contact() {
       <Mobile>
         <Avatar
           alt="Email"
-          color="warning"
           sx={(theme) => ({
             position: "relative",
             border: "none",
-            outline: `2px solid ${theme.palette.warning[500]}`,
-            boxShadow: `0 0 40px 5px rgba(${theme.palette.warning.mainChannel} / 0.4)`,
+            outline: `2px solid #a084ca`,
+            boxShadow: `0 0 40px 5px #a084ca44`,
+            background: '#f8f6fc',
+            color: '#a084ca',
             overflow: "visible",
             marginTop: "3rem",
             "&::before": {
@@ -35,7 +36,7 @@ export default function Contact() {
               top: "-5rem",
               height: "5rem",
               width: "2px",
-              background: `linear-gradient(to bottom, transparent, ${theme.palette.warning[400]})`,
+              background: `linear-gradient(to bottom, transparent, #a084ca)`
             },
           })}
         >
@@ -46,22 +47,23 @@ export default function Contact() {
         <Default>
           <Avatar
             alt="Email"
-            color="warning"
             sx={(theme) => ({
               position: "absolute",
               left: "-49px",
               top: "0",
               transform: "translateX(-50%)",
               border: "none",
-              outline: `2px solid ${theme.palette.warning[500]}`,
-              boxShadow: `0 0 40px 5px rgba(${theme.palette.warning.mainChannel} / 0.4)`,
+              outline: `2px solid #a084ca`,
+              boxShadow: `0 0 40px 5px #a084ca44`,
+              background: '#f8f6fc',
+              color: '#a084ca',
             })}
           >
             <FiMail />
           </Avatar>
         </Default>
         Get{" "}
-        <Typography color="warning" fontWeight="xl">
+        <Typography sx={{ color: '#a084ca', fontWeight: 700 }}>
           in touch
         </Typography>
       </Typography>
@@ -89,19 +91,19 @@ export default function Contact() {
             url: `mailto:${details.contact.email}`,
             icon: <FiMail />,
             title: "Email",
-            color: "#ea4335",
+            color: "#a084ca",
           },
           {
             url: details.contact.linkedin,
             icon: <FaLinkedin />,
             title: "LinkedIn",
-            color: "#0a66c2",
+            color: "#b39ddb",
           },
           {
             url: details.contact.github,
             icon: <FaGithub />,
             title: "GitHub",
-            color: "#E6EDF3",
+            color: "#7c43bd",
           },
         ]}
       />

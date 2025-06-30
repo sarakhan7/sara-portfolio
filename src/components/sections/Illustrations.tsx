@@ -161,7 +161,7 @@ export default function Illustrations() {
                       top: "0",
                       left: "0",
                       background:
-                        "linear-gradient(to bottom, #5594bc, transparent)",
+                        "linear-gradient(to bottom, #a084ca, transparent)",
                     }}
                   />
                   <ProgressiveImage

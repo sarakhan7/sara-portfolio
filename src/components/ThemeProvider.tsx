@@ -11,15 +11,15 @@ export const appTheme = extendTheme({
     dark: {
       palette: {
         background: {
-          body: 'var(--joy-palette-common-black)',
-          surface: 'var(--joy-palette-neutral-900)',
+          body: '#2d1836', // deep purple
+          surface: '#3d2352', // slightly lighter purple
         },
       },
     },
     light: {
       palette: {
         background: {
-          body: 'var(--joy-palette-neutral-50)',
+          body: '#f8f6fc', // very light purple/white
         },
       },
     },

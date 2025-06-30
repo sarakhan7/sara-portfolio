@@ -227,11 +227,13 @@ function Cursor({ step }: { step: number }) {
 function Board({ step }: { step: number }) {
   const mobile = useMobileMode();
   const [cardScrollProgress, setCardScrollProgress] = useState(0);
+  const cardColors = [
+    '#7c43bd', // deep purple
+    '#a084ca', // main purple
+    '#e1bee7', // lavender
+  ];
   const cardColor = useMemo(
-    () =>
-      ["danger", "warning", "success"][
-        Math.floor(cardScrollProgress * 3)
-      ] as ColorPaletteProp,
+    () => cardColors[Math.floor(cardScrollProgress * 3)],
     [cardScrollProgress]
   );
   return (
@@ -320,16 +322,15 @@ function Board({ step }: { step: number }) {
           <Default>
             <Card
               variant="outlined"
-              color={cardColor}
               className="indicator"
-              sx={(theme) => ({
+              sx={{
                 position: "absolute",
                 padding: "0.2rem 1rem",
                 width: "max-content",
                 top: "50%",
                 left: "calc(100% + 2rem)",
                 transform: "translateY(-50%)",
-                border: `1px dashed ${theme.palette[cardColor][500]}`,
+                border: `1px dashed ${cardColor}`,
                 "&::before": {
                   content: '""',
                   position: "absolute",
@@ -337,9 +338,9 @@ function Board({ step }: { step: number }) {
                   right: "calc(100% + 1px)",
                   width: "calc(2rem - 1px)",
                   height: "1rem",
-                  borderTop: `1px dashed ${theme.palette[cardColor][500]}`,
+                  borderTop: `1px dashed ${cardColor}`,
                 },
-              })}
+              }}
             >
               <code style={{ fontSize: "0.9rem" }}>
                 {`+ ${(50 * cardScrollProgress).toFixed(2)} px`}
@@ -349,16 +350,15 @@ function Board({ step }: { step: number }) {
           <Mobile>
             <Card
               variant="outlined"
-              color={cardColor}
               className="indicator"
-              sx={(theme) => ({
+              sx={{
                 position: "absolute",
                 padding: "0.2rem 1rem",
                 width: "max-content",
                 top: "calc(100% + 2rem)",
                 left: "50%",
                 transform: "translateY(-50%)",
-                border: `1px dashed ${theme.palette[cardColor][500]}`,
+                border: `1px dashed ${cardColor}`,
                 "&::before": {
                   content: '""',
                   position: "absolute",
@@ -366,11 +366,11 @@ function Board({ step }: { step: number }) {
                   right: "calc(100% + 1px)",
                   width: "calc(2rem - 1px)",
                   height: "2rem",
-                  borderBottom: `1px dashed ${theme.palette[cardColor][500]}`,
-                  borderLeft: `1px dashed ${theme.palette[cardColor][500]}`,
+                  borderBottom: `1px dashed ${cardColor}`,
+                  borderLeft: `1px dashed ${cardColor}`,
                   borderRadius: "0 0 0 1rem",
                 },
-              })}
+              }}
             >
               <code style={{ fontSize: "0.9rem" }}>
                 {`+ ${(50 * cardScrollProgress).toFixed(2)} px`}
@@ -504,12 +504,11 @@ export default function Goals() {
         >
           <Mobile>
             <Avatar
-              color="danger"
-              sx={(theme) => ({
+              sx={{
                 position: "relative",
                 border: "none",
-                outline: `2px solid ${theme.palette.danger[500]}`,
-                boxShadow: `0 0 40px 5px rgba(${theme.palette.danger.mainChannel} / 0.4)`,
+                outline: `2px solid #a084ca`,
+                boxShadow: `0 0 40px 5px #a084ca44`,
                 overflow: "visible",
                 marginTop: "3rem",
                 marginBottom: "1rem",
@@ -519,9 +518,9 @@ export default function Goals() {
                   top: "-5rem",
                   height: "5rem",
                   width: "2px",
-                  background: `linear-gradient(to bottom, transparent, ${theme.palette.danger[400]})`,
+                  background: `linear-gradient(to bottom, transparent, #a084ca)`,
                 },
-              })}
+              }}
             >
               <TbHeartHandshake />
             </Avatar>
@@ -531,25 +530,21 @@ export default function Goals() {
             sx={{
               position: "relative",
             }}
+            style={{ color: '#a084ca', fontWeight: 700 }}
             id="footer"
           >
-            <Typography textColor="danger.400" fontWeight="xl">
-              Engineering
-            </Typography>
-            {mobile ? <br /> : " "}
-            that elevates.
+            Engineering{mobile ? <br /> : " "}that elevates.
             <Default>
               <Avatar
-                color="danger"
-                sx={(theme) => ({
+                sx={{
                   position: "absolute",
                   top: "0",
                   right: "-50px",
                   transform: "translateX(50%)",
                   border: "none",
-                  outline: `2px solid ${theme.palette.danger[500]}`,
-                  boxShadow: `0 0 40px 5px rgba(${theme.palette.danger.mainChannel} / 0.4)`,
-                })}
+                  outline: `2px solid #a084ca`,
+                  boxShadow: `0 0 40px 5px #a084ca44`,
+                }}
               >
                 <TbHeartHandshake />
               </Avatar>

@@ -54,7 +54,7 @@ export default function Credits() {
                     left: "50%",
                     transform: "translateX(-50%)",
                     background:
-                      "linear-gradient(to top, #577fc0 25%, #C4DEE7, transparent)",
+                      "linear-gradient(to top, #a084ca 25%, #f8f6fc 60%, transparent)",
                   }}
                 />
                 <ProgressiveImage
@@ -94,7 +94,7 @@ export default function Credits() {
                     left: "50%",
                     transform: "translateX(-50%)",
                     background:
-                      "linear-gradient(to top, #130D0B 25%, #1B1C21 40%, #16161A 50%, transparent)",
+                      "linear-gradient(to top, #4b2067 25%, #a084ca 60%, transparent)",
                   }}
                 />
                 <ProgressiveImage
