@@ -10,7 +10,7 @@ import {
   Typography,
 } from "@mui/joy";
 import { TbHeartHandshake } from "react-icons/tb";
-import { ColorPaletteProp, SxProps } from "@mui/joy/styles/types";
+import { SxProps } from "@mui/joy/styles/types";
 import { MdOutlineRocketLaunch } from "react-icons/md";
 import { HiOutlineSparkles } from "react-icons/hi2";
 import { Parallax } from "react-scroll-parallax";

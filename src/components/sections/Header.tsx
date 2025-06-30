@@ -4,7 +4,6 @@ import { Avatar, Button, Stack, Typography, useColorScheme } from "@mui/joy";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { IoReaderOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import greetingFactory from "@/utils/Greeting";
 import { ATypography } from "@/pages/Landing";
 import details from "@/assets/Details";
 import { useMobileMode } from "@/components/Responsive";
@@ -22,7 +21,6 @@ export default function Header() {
   const mobile = useMobileMode();
   const { colorScheme } = useColorScheme();
 
-  const greeting = useMemo(greetingFactory, []);
   const dark = useMemo(() => colorScheme === "dark", [colorScheme]);
   const visitor = useMemo(
     () => visitors[Math.floor(Math.random() * visitors.length)],
