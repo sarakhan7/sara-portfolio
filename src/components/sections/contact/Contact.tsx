@@ -21,7 +21,7 @@ export default function Contact() {
       <Mobile>
         <Avatar
           alt="Email"
-          sx={(theme) => ({
+          sx={{
             position: "relative",
             border: "none",
             outline: `2px solid #a084ca`,
@@ -38,7 +38,7 @@ export default function Contact() {
               width: "2px",
               background: `linear-gradient(to bottom, transparent, #a084ca)`
             },
-          })}
+          }}
         >
           <FiMail />
         </Avatar>
@@ -47,7 +47,7 @@ export default function Contact() {
         <Default>
           <Avatar
             alt="Email"
-            sx={(theme) => ({
+            sx={{
               position: "absolute",
               left: "-49px",
               top: "0",
@@ -57,7 +57,7 @@ export default function Contact() {
               boxShadow: `0 0 40px 5px #a084ca44`,
               background: '#f8f6fc',
               color: '#a084ca',
-            })}
+            }}
           >
             <FiMail />
           </Avatar>
