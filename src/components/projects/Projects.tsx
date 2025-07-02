@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import details from "@/assets/Details";
 import Directory from "@/components/projects/Directory";
 import { ThemeAwareIllustration } from "./ThemeAwareIllustration";
+import { ThemeSwitcherButton } from "./ThemeSwitcherButton";
 
 export default function Projects() {
   const mobile = useMobileMode();
@@ -115,6 +116,7 @@ export default function Projects() {
           >
             Back to homepage
           </Button>
+          <ThemeSwitcherButton />
         </Stack>
         <Directory />
       </Stack>
