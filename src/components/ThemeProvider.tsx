@@ -59,8 +59,13 @@ export default function ThemeProvider({
 }: {
   children: React.ReactNode;
 }) {
+  // Force light mode for all users
+  useEffect(() => {
+    document.documentElement.setAttribute('data-joy-color-scheme', 'light');
+  }, []);
+
   return (
-    <CssVarsProvider theme={appTheme} defaultMode="system">
+    <CssVarsProvider defaultMode="light" disableNestedContext>
       <CssBaseline />
       <Meta />
       {children}
