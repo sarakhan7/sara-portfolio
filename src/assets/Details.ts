@@ -62,7 +62,7 @@ const details = {
       iconMin: aurifyMin,
       location: "Remote",
       contract: "Internship",
-      position: "Frontend Intern",
+      position: "Founder & Lead Developer",
   start: "July 2025",
   end: "Present",
   description: "Built an AI-powered communication coach web app generating personalized mock conversations; implemented scenario-based quizzes and conversation generation tailored to user profiles.",
