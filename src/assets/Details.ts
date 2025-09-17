@@ -61,7 +61,6 @@ const details = {
       icon: aurify,
       iconMin: aurifyMin,
       location: "Remote",
-      contract: "Internship",
       position: "Founder & Lead Developer",
   start: "July 2025",
   end: "Present",
