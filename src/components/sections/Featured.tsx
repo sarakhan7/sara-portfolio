@@ -16,8 +16,7 @@ import { BsJournalCode } from "react-icons/bs";
 import { FaCodeBranch, FaGithub, FaStar } from "react-icons/fa";
 import getProjects from "@/utils/Api";
 import { Parallax } from "react-scroll-parallax";
-import { FiArrowRight, FiCode, FiExternalLink } from "react-icons/fi";
-import { RiBracesLine } from "react-icons/ri";
+import { FiArrowRight, FiCode } from "react-icons/fi";
 import { Project, rank } from "@/assets/Projects";
 import { Link } from "react-router-dom";
 import { MdErrorOutline } from "react-icons/md";
@@ -134,33 +133,6 @@ function ProjectCard({
           <Typography level="body2" startDecorator={<FaCodeBranch />}>
             {project.interactions?.forks}
           </Typography>
-        </Stack>
-        <Stack direction="row" gap={1}>
-          <Button
-            variant="plain"
-            component="a"
-            color={color}
-            href={project.source}
-            target="_blank"
-            sx={{
-              flexShrink: 0,
-            }}
-            startDecorator={<RiBracesLine />}
-          >
-            Code
-          </Button>
-          {project.demo && (
-            <Button
-              component="a"
-              color={color}
-              variant="solid"
-              href={project.demo}
-              target="_blank"
-              startDecorator={<FiExternalLink />}
-            >
-              Website
-            </Button>
-          )}
         </Stack>
       </Stack>
     </Card>

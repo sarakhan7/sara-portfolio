@@ -73,7 +73,7 @@ function Comment({ step }: { step: number }) {
       </Avatar>
       <Stack>
         <Typography level="body3" textColor="text.secondary" fontWeight="600">
-          Alexander
+          Sara
           {" • "}
           <Typography textColor="text.tertiary">5 minutes ago</Typography>
         </Typography>

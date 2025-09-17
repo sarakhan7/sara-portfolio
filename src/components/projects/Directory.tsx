@@ -24,7 +24,7 @@ import {
 } from "@/assets/Projects";
 import getProjects from "@/utils/Api";
 import moment from "moment";
-import { FiCode, FiFile, FiPlay } from "react-icons/fi";
+// ...existing code...
 import { CiSearch, CiWifiOff } from "react-icons/ci";
 import { useMobileMode, useTabletMode } from "@/components/Responsive";
 import { GoDownload } from "react-icons/go";
@@ -268,67 +268,7 @@ function ProjectCard({
         justifyContent={mobile ? "end" : "initial"}
         width={mobile ? "100%" : "initial"}
       >
-        <Button
-          component="a"
-          href={project.source}
-          target="_blank"
-          size={mobile ? "md" : "sm"}
-          color="neutral"
-          variant="outlined"
-          sx={(theme) => ({
-            transition: "all ease .2s, height ease .4s",
-            borderRadius: ".5rem",
-            width: "fit-content",
-            flexShrink: 0,
-            padding: "1 2",
-            background: theme.palette.background.body,
-
-            "&:hover": {
-              background: theme.palette.text.primary,
-              color: theme.palette.background.level1,
-              borderColor: theme.palette.text.primary,
-            },
-            "&:active": {
-              transform: "scale(.98)",
-            },
-          })}
-          startDecorator={
-            project.language !== undefined ? <FiCode /> : <FiFile />
-          }
-        >
-          {project.language !== undefined ? "Explore source" : "Show project"}
-        </Button>
-        {project.demo && (
-          <Button
-            component="a"
-            href={project.demo}
-            target="_blank"
-            size={mobile ? "md" : "sm"}
-            color="neutral"
-            variant="outlined"
-            sx={(theme) => ({
-              transition: "all ease .2s",
-              borderRadius: ".5rem",
-              width: "fit-content",
-              flexShrink: 0,
-              padding: "1 2",
-
-              borderColor: theme.palette.text.primary,
-              background: theme.palette.text.primary,
-              color: theme.palette.background.level1,
-              "&:hover": {
-                backgroundColor: theme.palette.background.body,
-                color: theme.palette.text.primary,
-              },
-              "&:active": {
-                transform: "scale(.98)",
-              },
-            })}
-            startDecorator={<FiPlay />}
-          >
-            Run demo
-          </Button>
-        )}
+  {/* Buttons removed by request: Explore source / Run demo */}
       </Stack>
       {project.thumbnail && (
         <Box

@@ -166,17 +166,13 @@ export default function Header() {
         >
           {`${details.name.first} ${details.name.last}`}
         </ATypography>{" "}
-        — an 18-year-old college senior majoring in Computer Science, and a{" "}
-        <Typography textColor="text.primary">Junior Developer</Typography>
-        &nbsp;
+  — an 18-year-old college student majoring in Computer Science, a {" "}
+  <Typography component="span" textColor="text.primary">Software Engineer</Typography>
+  {", and founder at "}
         {currentCompany ? (
-          <>
-            {"at "}
-            <ATypography textColor="text.primary" href={currentCompany.url}>
-              {currentCompany.company}
-            </ATypography>
-            &nbsp;
-          </>
+          <ATypography textColor="text.primary" href={currentCompany.url}>
+            {currentCompany.company}
+          </ATypography>
         ) : null}
         . I build tools that make communication clearer, learning faster, and technology more intuitive.
       </Typography>

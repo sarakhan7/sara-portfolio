@@ -15,8 +15,12 @@ import wgu from "@/assets/icons/wgu.webp";
 import wguMin from "@/assets/icons/wgu.min.webp";
 import harper from "@/assets/icons/harper.webp";
 import harperMin from "@/assets/icons/harper.min.webp";
+import aurify from "@/assets/icons/aurify.webp";
+import aurifyMin from "@/assets/icons/aurify.min.webp";
 import websurfing from "@/assets/icons/websurfing.webp";
 import websurfingMin from "@/assets/icons/websurfing.min.webp";
+import cacheai from "@/assets/icons/cacheai.webp";
+import cacheaiMin from "@/assets/icons/cacheai.min.webp";
 
 const details = {
   name: {
@@ -35,8 +39,8 @@ const details = {
       location: "Online",
       degree: "Bachelor of Science",
       major: "Computer Science",
-      start: "Aug 2025",
-      end: "May 2026",
+  start: "Aug 2025",
+  end: "May 2027",
     },
     {
       school: "Harper College",
@@ -52,6 +56,19 @@ const details = {
   ],
   experience: [
     {
+      company: "Aurify",
+      url: "https://aurify.example.com/",
+      icon: aurify,
+      iconMin: aurifyMin,
+      location: "Remote",
+      contract: "Internship",
+      position: "Frontend Intern",
+  start: "July 2025",
+  end: "Present",
+  description: "Built an AI-powered communication coach web app generating personalized mock conversations; implemented scenario-based quizzes and conversation generation tailored to user profiles.",
+      skills: ["React", "TypeScript", "CSS", "Component Design"],
+    },
+    {
       company: "WebSurfing Studios",
       url: "https://websurfingstudios.com/",
       icon: websurfing,
@@ -60,7 +77,7 @@ const details = {
       contract: "Internship",
       position: "Junior Software Developer",
       start: "May 2025",
-      end: "Present",
+      end: "July 2025",
       description: "Building full-stack web applications and contributing to innovative software solutions." as string | string[],
       skills: [
         "React",
@@ -69,6 +86,20 @@ const details = {
         "Git",
         "Agile Development",
       ],
+    },
+    {
+      company: "CacheAI",
+      url: "https://www.linkedin.com/company/cacheai/",
+      icon: cacheai,
+      iconMin: cacheaiMin,
+      location: "Remote",
+      contract: "Internship",
+      position: "Software Developer",
+      start: "June 2025",
+      end: "August 2025",
+      description:
+        "Built dynamic candidate/job pages using Next.js 13, implemented API routes and Prisma ORM with Google Auth, and contributed in agile sprints for end-to-end features.",
+      skills: ["Next.js", "Prisma", "TypeScript", "Google Auth", "Agile"],
     },
   ],
   languages: [
